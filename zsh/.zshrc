@@ -40,3 +40,6 @@ PROMPT='
 %F{green}[%~]%f
 '\$vcs_info_msg_0_' $ '
 precmd(){ vcs_info }
+# history setting
+setopt extended_history
+alias history="history -df"
