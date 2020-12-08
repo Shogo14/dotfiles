@@ -39,3 +39,7 @@ precmd(){ vcs_info }
 # history setting
 setopt extended_history
 alias history="history -di"
+
+export PATH="$PATH:/Users/onsiter/program/flutter/bin"
+
+alias reviewer_stats="gh pr list | awk '{print \$1}' | xargs -I@ gh pr view @ | grep Requested | awk '{print \$2}' | sort | uniq -c | sort"
