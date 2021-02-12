@@ -43,3 +43,9 @@ alias history="history -di"
 export PATH="$PATH:/Users/onsiter/program/flutter/bin"
 
 alias reviewer_stats="gh pr list | awk '{print \$1}' | xargs -I@ gh pr view @ | grep Requested | awk '{print \$2}' | sort | uniq -c | sort"
+
+export GOPATH=$HOME/go
+export GOENV_ROOT=$HOME/.goenv
+export PATH=$GOENV_ROOT/bin:$PATH
+export PATH=$HOME/.goenv/bin:$PATH
+eval "$(goenv init -)"
