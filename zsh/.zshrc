@@ -11,7 +11,7 @@ if [ -f ~/.bashrc ]; then
 fi
 
 export PATH=/Applications/rar:$PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="$HOME/.rbenv/bin:$PATH"
 
 # autoload colors
 # colors
@@ -49,3 +49,22 @@ export GOENV_ROOT=$HOME/.goenv
 export PATH=$GOENV_ROOT/bin:$PATH
 export PATH=$HOME/.goenv/bin:$PATH
 eval "$(goenv init -)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/onsiter/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/onsiter/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/onsiter/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/onsiter/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# Git掃除コマンド
+alias reviewer_stats="git branch --merged|egrep -v '\*|develop|main|master'|xargs git branch -d"
+
