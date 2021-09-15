@@ -66,5 +66,5 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Git掃除コマンド
-alias reviewer_stats="git branch --merged|egrep -v '\*|develop|main|master'|xargs git branch -d"
+alias gb_clean="git branch --merged|egrep -v '\*|develop|main|master'|xargs git branch -d"
 
